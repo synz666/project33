@@ -1,18 +1,20 @@
-## Getting Started
+# Проєкт Обчислення Даних Руху
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Цей проєкт реалізує обчислення траєкторії руху тіла з використанням Java. Проєкт включає:
 
-## Folder Structure
+- Обчислення траєкторії руху тіла за заданими початковим кутом і швидкістю.
+- Збереження та відновлення даних за допомогою серіалізації.
+- Використання шаблону проєктування Factory Method (Віртуальний Конструктор).
+- Відображення результатів обчислень у текстовому вигляді.
 
-The workspace contains two folders by default, where:
+## Структура проєкту
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Проєкт складається з наступних класів та інтерфейсів:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `MotionData` (абстрактний клас): Базовий клас для зберігання даних про рух і реалізації обчислень траєкторії.
+- `TrajectoryData` (клас): Конкретна реалізація класу `MotionData` для обчислення та відображення траєкторії руху.
+- `Displayable` (інтерфейс): Інтерфейс для відображення результатів обчислень.
+- `MotionDataFactory` (інтерфейс): Інтерфейс для фабричного методу створення об'єктів `MotionData`.
+- `TrajectoryDataFactory` (клас): Конкретна фабрика для створення об'єктів `TrajectoryData`.
+- `Serializer` (клас): Клас для збереження та завантаження об'єктів `MotionData`.
+- `MotionTest` (головний клас): Клас для демонстрації роботи програми.
